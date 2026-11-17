@@ -4,13 +4,13 @@ import java.util.Collection;
 
 import graphql.com.google.common.base.Optional;
 
-public interface CrudRepository<T, ID>{
+public interface CrudRepository<T, ID, K>{
     Collection<T> findAll();
 
     Optional<T> findById(ID id);
 
     T save(T aggregate);
-    
+
     void softDelete(T aggregate);
 
     void hardDelete(ID id);
