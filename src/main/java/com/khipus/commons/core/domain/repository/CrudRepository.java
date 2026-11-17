@@ -4,7 +4,7 @@ import java.util.Collection;
 
 import graphql.com.google.common.base.Optional;
 
-public interface CrudRepository<T, ID, K>{
+public interface CrudRepository<T, ID> {
     Collection<T> findAll();
 
     Optional<T> findById(ID id);
